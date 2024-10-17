@@ -41,7 +41,6 @@ package oracle.jdbc.provider.azure.configuration;
 import oracle.jdbc.driver.OracleConfigurationJsonProvider;
 import oracle.jdbc.provider.azure.keyvault.KeyVaultSecretFactory;
 import oracle.jdbc.provider.parameter.ParameterSet;
-import oracle.jdbc.util.OracleConfigurationCache;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -97,10 +96,5 @@ public class AzureVaultJsonProvider extends OracleConfigurationJsonProvider {
   @Override
   public String getType() {
     return "azurevault";
-  }
-
-  @Override
-  public OracleConfigurationCache getCache() {
-    return null;
   }
 }

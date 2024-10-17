@@ -45,7 +45,6 @@ import java.util.Map;
 import oracle.jdbc.driver.OracleConfigurationJsonProvider;
 import oracle.jdbc.provider.gcp.objectstorage.GcpCloudStorageFactory;
 import oracle.jdbc.provider.parameter.ParameterSet;
-import oracle.jdbc.util.OracleConfigurationCache;
 
 /**
  * A provider for JSON payload which contains configuration from GCP Cloud
@@ -93,8 +92,4 @@ public class GcpCloudStorageConfigurationProvider extends OracleConfigurationJso
     return GcpCloudStorageFactory.getInstance().request(parameterSet).getContent();
   }
 
-  @Override
-  public OracleConfigurationCache getCache() {
-    return null;
-  }
 }

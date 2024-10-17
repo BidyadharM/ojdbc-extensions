@@ -272,14 +272,10 @@ public class AzureAppConfigurationProvider
       }
   }
 
+  @Override
   public Properties removeProperties(String location) {
     Properties deletedProp = cache.remove(location);
     return deletedProp;
-  }
-
-  @Override
-  public OracleConfigurationCache getCache() {
-    return null;
   }
 }
 
