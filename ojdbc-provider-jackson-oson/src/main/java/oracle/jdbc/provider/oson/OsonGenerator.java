@@ -104,6 +104,7 @@ public class OsonGenerator extends GeneratorBase {
 
   /**
    * Flushes the generator and writes any buffered output to the underlying stream.
+   * @implNote This method is a no-op.
    * @see OracleJsonGenerator#flush() Generator flush
    * @throws IOException If an I/O error occurs.
    */

@@ -164,8 +164,7 @@ public class OsonParser extends ParserBase {
    */
   @Override
   public JsonToken nextToken() throws IOException {
-    if (logger.isLoggable(Level.FINEST))
-      logger.log(Level.FINEST, "nextToken");
+    logger.log(Level.FINEST, "nextToken");
     if (parser.hasNext()) {
       currentEvent = parser.next();
       return fromOsonEvent(currentEvent);
