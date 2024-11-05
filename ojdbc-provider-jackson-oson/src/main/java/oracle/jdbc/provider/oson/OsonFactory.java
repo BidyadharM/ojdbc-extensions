@@ -61,6 +61,9 @@ public class OsonFactory extends JsonFactory {
   private static final OracleJsonFactory factory = new OracleJsonFactory();
   /**
    * Creates a JSON generator that writes to the given output stream, using UTF-8 encoding.
+   * <p>
+   * @implNote, Nothing will be written to the <code>OutputStream</code> until the
+   * created <code>JsonGenerator</code> is closed.
    *
    * @param out The output stream to write JSON content to.
    * @return A custom OsonGenerator instance.
@@ -73,7 +76,9 @@ public class OsonFactory extends JsonFactory {
 
   /**
    * Creates a JSON generator that writes to the given output stream with the specified encoding.
-   *
+   *  <p>
+   *  @implNote, Nothing will be written to the <code>OutputStream</code> until the
+   *  created <code>JsonGenerator</code> is closed.
    * @param out The output stream to write JSON content to.
    * @param enc The encoding to use for the generator.
    * @return A custom OsonGenerator instance.
@@ -101,7 +106,9 @@ public class OsonFactory extends JsonFactory {
 
   /**
    * Creates a JSON generator that writes to the given writer.
-   *
+   * <p>
+   * @implNote  that nothing will be written to the <code>OutputStream</code> until the
+   * created <code>JsonGenerator</code> is closed.
    * @param out The writer to write JSON content to.
    * @return A custom OsonGenerator instance.
    * @throws IOException If an I/O error occurs.
@@ -123,7 +130,8 @@ public class OsonFactory extends JsonFactory {
 
   /**
    * Creates a JSON generator that writes to the given DataOutput stream.
-   *
+   * @implNote that nothing will be written to the <code>OutputStream</code> until the
+   * created <code>JsonGenerator</code> is closed.
    * @param out The DataOutput stream to write JSON content to.
    * @return A custom OsonGenerator instance.
    * @throws IOException If an I/O error occurs.
@@ -135,7 +143,8 @@ public class OsonFactory extends JsonFactory {
 
   /**
    * Creates a JSON generator that writes to the given DataOutput stream and Encoding.
-   *
+   * @implNote that nothing will be written to the <code>OutputStream</code> until the
+   * created <code>JsonGenerator</code> is closed.
    * @param out The DataOutput stream to write JSON content to.
    * @return A custom OsonGenerator instance.
    * @throws IOException If an I/O error occurs.
@@ -147,7 +156,8 @@ public class OsonFactory extends JsonFactory {
 
   /**
    * Creates a JSON generator that writes to the specified file with the given encoding.
-   *
+   * @implNote that nothing will be written to the <code>OutputStream</code> until the
+   * created <code>JsonGenerator</code> is closed.
    * @param f The file to write JSON content to.
    * @param enc The encoding to use.
    * @return A custom OsonGenerator instance.
@@ -166,7 +176,8 @@ public class OsonFactory extends JsonFactory {
 
   /**
    * Creates a JSON generator using the provided OracleJsonGenerator instance.
-   *
+   * @implNote that nothing will be written to the <code>OutputStream</code> until the
+   * created <code>JsonGenerator</code> is closed.
    * @param oGen The OracleJsonGenerator to use for generating JSON content.
    * @return A custom OsonGenerator instance.
    */
